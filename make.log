@@ -1,0 +1,8 @@
+rm -f parser.o front.o dcooke_parser
+cc -Wall -c front.c
+front.c: In function ‘lookup’:
+front.c:192:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc -Wall -c parser.c
+cc -Wall front.o parser.o -o dcooke_parser
